@@ -3,10 +3,10 @@ package main.java.comparableXcomparator;
 import java.util.Comparator;
 
 //Classe para comparar Livro por ano
-class CompararAno implements Comparator<Livro> {
+class CompareYear implements Comparator<Book> {
 	@Override
-	public int compare(Livro l1, Livro l2) {
-		return Integer.compare(l1.getAno(), l2.getAno());
+	public int compare(Book l1, Book l2) {
+		return Integer.compare(l1.getYear(), l2.getYear());
 		/*
 		if (l1.getAno() < l2.getAno())
 			return -1;
