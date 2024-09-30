@@ -18,6 +18,18 @@ public class CatalogoLivros {
         }
     }
 
+    public Optional<Livro> pesquisarPorTitulo(String titulo) {
+        if(!listaDeLivros.isEmpty()) {
+            for (Livro livro : listaDeLivros) {
+                if (titulo.equalsIgnoreCase(livro.getTitulo())) {
+                    return Optional.of(livro); // Retorna um Optional contendo o livro encontrado
+                }
+            }
+        }
+        return Optional.empty(); // Retorna um Optional vazio se nenhum livro for encontrado
+    }
+
+    /*
     public Livro pesquisarPorTitulo(String titulo) {
         Livro livroPorTitulo = null;
         for(Livro livro : listaDeLivros) {
@@ -28,12 +40,14 @@ public class CatalogoLivros {
         }
         return livroPorTitulo;
     }
-
+*/
     public List<Livro> pesquisarPorAutor(String autor) {
         List<Livro> livrosDoAutor = new ArrayList<>();
-        for(Livro livro : listaDeLivros) {
-            if(autor.equalsIgnoreCase(livro.getAutor())) {
-                livrosDoAutor.add(livro);
+        if(!listaDeLivros.isEmpty()) {
+            for(Livro livro : listaDeLivros) {
+                if(autor.equalsIgnoreCase(livro.getAutor())) {
+                    livrosDoAutor.add(livro);
+                }
             }
         }
         return livrosDoAutor;
@@ -41,9 +55,11 @@ public class CatalogoLivros {
 
     public List<Livro> pesquisarPorIntervaloAnos(int anoInicial, int anoFinal) {
         List<Livro> livrosNoIntervaloAnos = new ArrayList<>();
-        for(Livro livro : listaDeLivros) {
-            if(anoInicial <= livro.getAno() && livro.getAno() <= anoFinal) {
-                livrosNoIntervaloAnos.add(livro);
+        if(!listaDeLivros.isEmpty()) {
+            for(Livro livro : listaDeLivros) {
+                if(anoInicial <= livro.getAno() && livro.getAno() <= anoFinal) {
+                    livrosNoIntervaloAnos.add(livro);
+                }
             }
         }
         return livrosNoIntervaloAnos;
