@@ -5,7 +5,9 @@ import java.util.List;
 
 public class Testar {
     public static void main (String[] args) {
-     /*   String nome;
+
+     /* CASO QUEIRA FAZER AS ENTRADAS DE FORMA INTERATIVA:
+        String nome;
         int idade;
         double altura;
         String queroAdicionar = "s";
