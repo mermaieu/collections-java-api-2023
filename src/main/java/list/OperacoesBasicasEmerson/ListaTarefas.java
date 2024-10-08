@@ -80,7 +80,7 @@ public class ListaTarefas {
         // Foi necessário sobreescrever o metodo toString() na classe Tarefa
         // para que, de fato, as descricões pudessem ser impressas de forma significativa.
 
-        // Sem sobreescrever to String, que que será impresso é a representação padrão
+        // Sem sobreescrever to String, o que seria impresso é a representação padrão
         // do Object, que inclui o nome da classe e o código de hash em formato hexadecimal.
 
         // Com sobrescrita de toString(): Você pode personalizar essa saída para algo
